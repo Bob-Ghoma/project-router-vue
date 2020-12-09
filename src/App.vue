@@ -2,11 +2,29 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/contacts">Contact</router-link> |
+      <router-link to="/product/1">Produit 1</router-link> |
+      <router-link to="/product/2">Produit 2</router-link> |
+      <router-link :to="{name: 'Product', params: {id: 5}}">About 2</router-link> |
+      <router-link to="Movie">Movie</router-link> |
+      <router-link to="/ListMovie">Liste-Movie</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      routeName: 'About',
+    };
+  },
+};
+
+</script>
 
 <style>
 #app {
